@@ -44,8 +44,15 @@
 
 static const int DEFAULT_BAUDRATE = 57600;
 
+#ifndef DEF_g_used_port_num
+#define DEF_g_used_port_num true
 int     g_used_port_num;
-uint8_t    *g_is_using;
+#endif 
+
+#if !defined(DEF_g_is_using)
+  #define DEF_g_is_using true
+  uint8_t    *g_is_using;
+#endif
 
 WINDECLSPEC int     portHandler             (const char *port_name);
 

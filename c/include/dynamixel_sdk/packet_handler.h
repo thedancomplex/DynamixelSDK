@@ -79,7 +79,10 @@ typedef struct
   uint8_t     *broadcast_ping_id_list;
 }PacketData;
 
+#ifndef DEF_packetData
+#define DEF_packetData 1
 PacketData *packetData;
+#endif
 
 WINDECLSPEC void        packetHandler       ();
 
