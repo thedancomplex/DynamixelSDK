@@ -42,16 +42,16 @@
 
 #include "robotis_def.h"
 
-static const int DEFAULT_BAUDRATE = 57600;
+static const int DEFAULT_BAUDRATE = 1000000;
 
 #ifndef DEF_g_used_port_num
 #define DEF_g_used_port_num true
-int     g_used_port_num;
+static int     g_used_port_num;
 #endif 
 
 #if !defined(DEF_g_is_using)
   #define DEF_g_is_using true
-  uint8_t    *g_is_using;
+static  uint8_t    *g_is_using;
 #endif
 
 WINDECLSPEC int     portHandler             (const char *port_name);

@@ -81,7 +81,7 @@ typedef struct
 
 #ifndef DEF_packetData
 #define DEF_packetData 1
-PacketData *packetData;
+static PacketData *packetData;
 #endif
 
 WINDECLSPEC void        packetHandler       ();
